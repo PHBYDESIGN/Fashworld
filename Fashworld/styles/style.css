@@ -1,0 +1,281 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 500ms;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    max-width: 100em;
+    margin: 0 auto;
+}
+
+.cleafix::after,
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*typography*/
+
+.h1-split {
+    color: #8c264c;
+    background: #232323;
+    padding: .5rem;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    font-weight: 900;
+    margin-top: 1em;
+}
+
+.title span {
+    font-weight: 300;
+    display: block;
+    font-size: .8em;
+}
+
+.unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.unstyled-list a {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.unstyled-list a:hover,
+.unstyled-list a:focus {
+    color: #8c264c;
+    text-decoration: underline;
+}
+
+@media (min-width:60rem) {
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    .title {
+        font-size: 3.6rem;
+    }
+}
+
+
+/*button*/
+
+.button {
+    display: inline-block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+}
+
+@media (min-width:60rem) {
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+.button-small {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.button-accent {
+    color: #8c264c;
+    border-color: #8c264c;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    background: #8c264c;
+    color: #232323;
+}
+
+
+/*header*/
+
+header {
+    position: absolute;
+    margin-top: 1em;
+    left: 0;
+    right: 0;
+    margin: 1em;
+}
+
+
+/*Hero*/
+
+.home-hero {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+}
+
+
+/*home-hero area*/
+
+.home-about-textbox {
+    background-color: #232323;
+    padding: 4em;
+    width: 100vw;
+    margin-left: -2.7%;
+    outline: 2px solid #8c264c;
+    outline-offset: -2.5em;
+    position: relative;
+    color: #FFF;
+}
+
+.home-about-textbox h1 {
+    color: #8c264c;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .3em;
+    background: #232323;
+    padding: .25em;
+}
+
+@media (min-width:25rem) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.home-about-textbox h1 {
+    top: .5rem;
+    padding: 0.325rem;
+}
+
+@media (min-width:60rem) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .home-about {
+        background-image: url(../img/homeabout.jpg);
+        background-repeat: no-repeat;
+        padding: 5em;
+    }
+    .home-about-textbox {
+        width: 50%;
+        padding: 7em;
+        outline-offset: -3.75em;
+        margin-left: -2.5%;
+        top: -7em;
+        text-align: left;
+        box-shadow: 0 0 3em 0 rgba(0, 0, 0, .2em)
+    }
+    .home-about-textbox h1 {
+        top: .75rem;
+        left: 6rem;
+        transform: translateX(0);
+    }
+}
+
+
+/*Portfolio
+========*/
+
+.portfolio {
+    margin: 3em 0;
+}
+
+.port-item {
+    margin: 0;
+    position: relative;
+}
+
+.port-item img {
+    display: block;
+}
+
+.port-desc {
+    position: absolute;
+    z-index: 100;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: white;
+    background: rgba(0, 0, 0, .6);
+    padding-bottom: 2em;
+}
+
+.port-desc p {
+    margin: 1em;
+}
+
+@media (min-width: 37rem) {
+    .port-item {
+        width: 50%;
+        float: left;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 60rem) {
+    .port-item {
+        width: 33.3333334%;
+        float: left;
+    }
+    .port-desc {
+        transform: translateY(150%);
+    }
+    .port-item:hover .port-desc {
+        transform: translateY(0%);
+    }
+}
+
+
+/*Modal*/
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #232323;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7p 20px 0 rgba(0, 0, 0, 0.17);
+}
